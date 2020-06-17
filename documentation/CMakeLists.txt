@@ -7,7 +7,7 @@ project(GreeterDocs)
 include(../cmake/CPM.cmake)
 
 CPMAddPackage(
-  NAME Greeter
+  NAME CirclErr
   SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/..
 )
 
@@ -23,7 +23,7 @@ set(BUILD_DOCUMENTATION ON CACHE INTERNAL "")
 include(${StableCoder-cmake-scripts_SOURCE_DIR}/doxygen.cmake)
 
 # set Doxyfile variables
-set(DOXYGEN_PROJECT_NAME Greeter)
+set(DOXYGEN_PROJECT_NAME CirclErr)
 set(DOXYGEN_PROJECT_VERSION ${Greeter_VERSION})
 set(DOXYGEN_PROJECT_ROOT "${CMAKE_CURRENT_LIST_DIR}/..")
 

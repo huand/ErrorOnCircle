@@ -6,11 +6,11 @@
 #include <string>
 #include <unordered_map>
 
-const std::unordered_map<std::string, greeter::LanguageCode> languages{
-    {"en", greeter::LanguageCode::EN},
-    {"de", greeter::LanguageCode::DE},
-    {"es", greeter::LanguageCode::ES},
-    {"fr", greeter::LanguageCode::FR},
+const std::unordered_map<std::string, circlerr::LanguageCode> languages{
+    {"en", circlerr::LanguageCode::EN},
+    {"de", circlerr::LanguageCode::DE},
+    {"es", circlerr::LanguageCode::ES},
+    {"fr", circlerr::LanguageCode::FR},
 };
 
 int main(int argc, char** argv) {
@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
     std::cout << options.help() << std::endl;
     return 0;
   } else if (result["version"].as<bool>()) {
-    std::cout << "Greeter, version " << GREETER_VERSION << std::endl;
+    std::cout << "CirclErr, version " << GREETER_VERSION << std::endl;
     return 0;
   }
 
@@ -44,8 +44,8 @@ int main(int argc, char** argv) {
     return 1;
   }
 
-  greeter::Greeter greeter(name);
-  std::cout << greeter.greet(langIt->second) << std::endl;
+  circlerr::CirclErr circlerr(name);
+  std::cout << circlerr.greet(langIt->second) << std::endl;
 
   return 0;
 }

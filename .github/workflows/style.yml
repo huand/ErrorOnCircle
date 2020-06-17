@@ -1,26 +1,26 @@
-name: Style
+# name: Style
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+# on:
+#   push:
+#     branches:
+#       - master
+#   pull_request:
+#     branches:
+#       - master
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: macos-latest
+#     runs-on: macos-latest
     
-    steps:
-    - uses: actions/checkout@v1
+#     steps:
+#     - uses: actions/checkout@v1
     
-    - name: Install clang-format
-      run: brew install clang-format
+#     - name: Install clang-format
+#       run: brew install clang-format
 
-    - name: configure
-      run: cmake -Htest -Bbuild
+#     - name: configure
+#       run: cmake -Htest -Bbuild
 
-    - name: check style
-      run: cmake --build build --target check-format
+#     - name: check style
+#       run: cmake --build build --target check-format
